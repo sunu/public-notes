@@ -1,0 +1,35 @@
+name: Build Site
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.8]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Debug
+        run: python --version
+      - uses: actions-rs/install@v0.1
+        with:
+          crate: sd
+          version: latest
+          use-tool-cache: true
+      - uses: actions-rs/install@v0.1
+        with:
+          crate: fd-find
+          version: latest
+          use-tool-cache: true
+      - name: Fix links and build backlinks
+        run: |
+          python build.py
+      - name: Commit report
+        run: |
+          git config --global user.name 'gh-actions'
+          git config --global user.email 'sunu@users.noreply.github.com'
+          git commit -am "Automated Build"
+          git push origin master
