@@ -1,4 +1,7 @@
-# Sunu's Notes
+Hi, I'm Sunu. I use this space to publish some random notes I wrote. I write them
+using [Obsidian](https://obsidian.md/) and publish them using a homegrown build script
+that runs on [Github Actions](https://github.com/sunu/public-notes/actions). This is my
+attempt at building a personal [Zettelkasten](https://en.wikipedia.org/wiki/Zettelkasten)
+![typing.gif](/assets/typing.gif)
 
-Hi, I'm Sunu. This are some random notes I wrote.
-![typing.png](/assets/typing.png)
+Here are some of my recent and/or interesting notes:
