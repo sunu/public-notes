@@ -3,6 +3,20 @@
 
 @import "{{ site.theme }}";
 
+@import url('https://fonts.googleapis.com/css?family=Arvo&display=swap');
+
+html {
+  font-family: 'Arvo', Helvetica, Arial, sans-serif;
+}
+
+body {
+  font-size: 1.2em;
+  padding-left: 20%;
+  background-color: #f5f5f1;
+  color: #000000;
+  max-width: 55%;
+}
+
 a {
   color: #3300ff;
 }
@@ -36,21 +50,41 @@ img {
 
 @media only screen and (min-width: 1170px) {
   img {
-    max-width: 130%;
-    margin-left: -15%;
     margin-top: 20px;
     margin-bottom: 20px;
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-blockquote {
-  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida,
-    "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1rem 0;
+  padding: 0;
+}
+
+p,
+ol,
+ul {
+  line-height: 2rem;
+}
+
+p {
+  padding-right: 0;
+  vertical-align: baseline;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 2px solid #b2dffb;
+  padding: 1px;
+}
+
+a:hover {
+  background: #b2dffb;
+  transition: all 0.2s ease-out;
 }
 
 .github-only {
